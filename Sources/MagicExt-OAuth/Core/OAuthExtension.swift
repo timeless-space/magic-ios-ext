@@ -102,6 +102,7 @@ public class OAuthExtension: BaseModule {
                     shimVC.source = authURL
                     shimVC.callbackURL = callbackURLScheme
                     shimVC.resolver = resolver
+                    shimVC.modalPresentationStyle = .overFullScreen
                     topController.present(shimVC, animated: true)
                 } else if #available(iOS 11.0, *) {
                     let shimVC = ShimSFASViewController()
